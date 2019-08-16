@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+	<button type="button" class="btn">Change Bck Color</button>
+
+	<script type="text/javascript">
+		//select required elements from html
+		var body = document.querySelector('body');
+		var btn = document.querySelector('.btn');
+
+		//create array of colors
+		var colors =['blue', 'orange', 'red', 'green', 'yellow'];
+		
+		//add click event and initiate a changeColor function
+		btn.addEventListener('click', changeColor);
+
+		//change color function
+		function changeColor (){
+			var random = Math.floor(Math.random()*colors.length);
+			body.style.backgroundColor = colors[random];
+		};
+	</script>
+
+</body>
+</html>
